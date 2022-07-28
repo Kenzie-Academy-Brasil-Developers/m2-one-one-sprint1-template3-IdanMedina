@@ -31,3 +31,22 @@ const listaDeDevs = [
   },
 ];
 
+const section = document.querySelector("#devs_list")
+const footer = document.querySelector("#main_footer")
+
+function renderizaCards (array){
+  
+for (let i = 0; i < array.length; i++){
+  let div = document.createElement("div")
+  div.classList.add("div")
+  section.appendChild(div)
+  let title = document.createElement("h2")
+  title.classList.add("h2")
+ title.innerText = `${array.nome}`
+ let image =  document.createElement("img")
+ image.classList.add("img")
+ image.src = array.imagem
+}
+
+}
+renderizaCards(listaDeDevs)
